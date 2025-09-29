@@ -20,5 +20,5 @@ It includes a function `Format-WinEvent` that converts positional event properti
 👩‍💻 Author
 
 Aiymgul Toktarbayeva
- https://x.com/aiymgul91521
-https://www.linkedin.com/in/aiymgul-toktarbayeva-68a52a196/
+- https://x.com/aiymgul91521
+- https://www.linkedin.com/in/aiymgul-toktarbayeva-68a52a196/
