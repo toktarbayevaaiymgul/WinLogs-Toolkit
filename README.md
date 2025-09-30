@@ -36,7 +36,7 @@ By default, the `Properties` property in each event is a list of values that mus
 >```
 
 ![Format-WinEvent](Images/Screenshot_Properties.png "Format-WinEvent Screenshot Properties")
-
+<img width="1672" height="633" alt="Image" src="https://github.com/user-attachments/assets/e61cf89d-ee00-4ca1-a90a-d15fc942d9f1" />
 However, after running `Format-WinEvent` the newly-added `Props` property contains these properties normalized as named key-value pairs:
 
 >```PowerShell
