@@ -35,7 +35,6 @@ By default, the `Properties` property in each event is a list of values that mus
 >$events[0].Properties
 >```
 
-![Format-WinEvent](Images/Screenshot_Properties.png "Format-WinEvent Screenshot Properties")
 <img width="1672" height="633" alt="Image" src="https://github.com/user-attachments/assets/e61cf89d-ee00-4ca1-a90a-d15fc942d9f1" />
 However, after running `Format-WinEvent` the newly-added `Props` property contains these properties normalized as named key-value pairs:
 
@@ -43,7 +42,6 @@ However, after running `Format-WinEvent` the newly-added `Props` property contai
 >$events[0].Props
 >```
 
-![Format-WinEvent](Images/Screenshot_Props.png "Format-WinEvent Screenshot Props")
 <img width="1022" height="598" alt="Image" src="https://github.com/user-attachments/assets/2e9b0b0c-8503-4f8c-beec-13f52c052c63" />
 
 This normalization simplifies referencing properties by name (even across different EIDs) as is demonstrated in the following examples:
@@ -57,7 +55,6 @@ Identify counts for each EID containing an Image property ending with "\mshta.ex
 >         | Group-Object Id -NoElement
 >```
 
-![Format-WinEvent](Images/Screenshot_Example_1.png "Format-WinEvent Screenshot Example 1")
 <img width="1570" height="227" alt="Image" src="https://github.com/user-attachments/assets/20f3abd5-2cdd-4cf7-ae70-396237b658d1" />
 
 ### EXAMPLE 2:
@@ -71,7 +68,6 @@ Identify counts of Company and Product property combinations for EID 7 (Image Lo
 >         | Select-Object Count,Name
 >```
 
-![Format-WinEvent](Images/Screenshot_Example_2.png "Format-WinEvent Screenshot Example 2")
 <img width="1542" height="651" alt="Image" src="https://github.com/user-attachments/assets/46a39bd9-2004-496a-8243-2466134e40e1" />
 
 
@@ -89,7 +85,6 @@ $_.Props.Image -match '\\mshta\.exe$'
  | Select-Object RuleName,ParentImage,ParentCommandLine,Image,CommandLine
 >```
 
-![Format-WinEvent](Images/Screenshot_Example_3.png "Format-WinEvent Screenshot Example 3")
 <img width="1897" height="240" alt="Image" src="https://github.com/user-attachments/assets/8ae7a2cd-7d92-445c-98df-0156be624f38" />
 ---
 
