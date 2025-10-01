@@ -75,14 +75,15 @@ Identify counts of Company and Product property combinations for EID 7 (Image Lo
 Simulate detection to find events containing Scheduled Task executing an Image property ending with "\mshta.exe":
 
 >```PowerShell
-| Format-WinEvent        | Where-Object {                                       
- $_.Id -eq 1 -and           
- $_.Props.ParentImage -match '\\svchost\.exe$' -and
-  $_.Props.ParentCommandLine -match ' -p -s Schedule$' -and
-$_.Props.Image -match '\\mshta\.exe$'
-  } 
- | ForEach-Object { $_.Props } 
- | Select-Object RuleName,ParentImage,ParentCommandLine,Image,CommandLine
+>$events | Format-WinEvent `
+>         | Where-Object {                                       
+>             $_.Id -eq 1 -and           
+>             $_.Props.ParentImage -match '\\svchost\.exe$' -and
+>             $_.Props.ParentCommandLine -match ' -p -s Schedule$' -and
+>             $_.Props.Image -match '\\mshta\.exe$'
+>         } 
+>         | ForEach-Object { $_.Props } 
+>         | Select-Object RuleName,ParentImage,ParentCommandLine,Image,CommandLine
 >```
 
 <img width="1897" height="240" alt="Image" src="https://github.com/user-attachments/assets/8ae7a2cd-7d92-445c-98df-0156be624f38" />
