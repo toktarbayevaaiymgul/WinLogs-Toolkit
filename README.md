@@ -26,7 +26,7 @@ It includes a function `Format-WinEvent` that converts positional event properti
 Load Windows event logs using the built-in `Get-WinEvent` cmdlet:
 
 >```PowerShell
->$events = Get-WinEvent -Path ./Examples/Microsoft-Windows-Sysmon%4Operational.evtx | Format-WinEvent
+>$events = Get-WinEvent -Path ./Microsoft-Windows-Sysmon%4Operational.evtx | Format-WinEvent
 >```
 
 By default, the `Properties` property in each event is a list of values that must be accessed via positional parameters:
